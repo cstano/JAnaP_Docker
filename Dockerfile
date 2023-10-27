@@ -14,6 +14,10 @@ RUN pip install -r /tmp/requirements.txt && \
     rm /tmp/requirements.txt
 # Install development dependencies
 
-RUN python web/application.py
+COPY . /tmp
 
+CMD ["python", "/tmp/web/application.py"]
 EXPOSE 5000
+
+# CMD jupyter notebook --no-browser --ip 0.0.0.0 --port 8888 --allow-root
+# EXPOSE 8888

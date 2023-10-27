@@ -37,4 +37,4 @@ if __name__ == "__main__":
         thread.start_new_thread(controllers.worker.background_thread, ())
 
     controllers.app.secret_key = "AF8RN4L6SKeRDNTw"
-    controllers.app.run(debug=True)
+    controllers.app.run(host="0.0.0.0",debug=True)
