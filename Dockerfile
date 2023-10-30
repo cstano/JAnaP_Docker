@@ -16,8 +16,8 @@ RUN pip install -r /tmp/requirements.txt && \
 
 COPY . /tmp
 
-CMD ["python", "/tmp/web/application.py"]
-EXPOSE 5000
+# CMD ["python", "/tmp/web/application.py"]
+# EXPOSE 5001
 
-# CMD jupyter notebook --no-browser --ip 0.0.0.0 --port 8888 --allow-root
-# EXPOSE 8888
+CMD ["sh", "-c", "jupyter notebook --no-browser --ip 0.0.0.0 --port 8888 --allow-root --notebook-dir=/tmp/"]
+EXPOSE 8888
